@@ -23,11 +23,11 @@ const DivisionCard: React.FC<DivisionCardProps> = ({
 }) => {
   return (
     <div className={cn(
-      "bg-exelion-secondary p-6 rounded-lg shadow-lg border-t-4 border-exelion-accent transition-all duration-300 hover:transform hover:translate-y-[-5px] animate-fade-in-up",
+      "bg-exelion-secondary p-6 rounded-lg shadow-lg border-t-4 border-exelion-accent transition-all duration-500 hover:transform hover:translate-y-[-10px] hover:shadow-2xl animate-fade-in-up group",
       delay
     )}>
       <div className="flex items-center gap-4 mb-4">
-        <div className="bg-exelion-accent/10 text-exelion-accent p-3 rounded-full">
+        <div className="bg-exelion-accent/10 text-exelion-accent p-3 rounded-full transform transition-transform group-hover:scale-110 group-hover:rotate-6">
           {iconName}
         </div>
         <div>
@@ -37,10 +37,10 @@ const DivisionCard: React.FC<DivisionCardProps> = ({
       </div>
       
       <div className="mt-4">
-        <h4 className="text-md font-semibold text-exelion-accent mb-2">Focus</h4>
+        <h4 className="text-md font-semibold text-exelion-accent mb-2 group-hover:translate-x-1 transition-transform">Focus</h4>
         <p className="text-exelion-muted mb-4">{description}</p>
         
-        <h4 className="text-md font-semibold text-exelion-accent mb-2">Purpose</h4>
+        <h4 className="text-md font-semibold text-exelion-accent mb-2 group-hover:translate-x-1 transition-transform">Purpose</h4>
         <p className="text-exelion-muted">{purpose}</p>
       </div>
     </div>

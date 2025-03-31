@@ -29,7 +29,7 @@ const ValuesSection = () => {
   return (
     <section id="values" className="py-24 bg-exelion-DEFAULT">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-exelion-foreground mb-4">
             Our <span className="text-exelion-accent">Core Values</span>
           </h2>
@@ -42,23 +42,24 @@ const ValuesSection = () => {
           {values.map((value, index) => (
             <div 
               key={value.name} 
-              className="group bg-exelion-secondary rounded-lg p-8 text-center transition-transform duration-300 hover:-translate-y-2"
+              className="group bg-exelion-secondary rounded-lg p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="mb-6 flex justify-center">{value.icon}</div>
+              <div className="mb-6 flex justify-center group-hover:animate-bounce transition-transform duration-300">{value.icon}</div>
               <h3 className="text-xl font-bold text-exelion-foreground mb-3">{value.name}</h3>
               <p className="text-exelion-muted">{value.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-exelion-secondary rounded-lg p-8 max-w-3xl mx-auto">
+        <div className="mt-16 bg-exelion-secondary rounded-lg p-8 max-w-3xl mx-auto transform transition-all duration-500 hover:shadow-2xl animate-fade-in-up animate-delay-500">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-exelion-foreground mb-2">Our Vision & Mission</h3>
-            <div className="h-1 w-20 bg-exelion-accent mx-auto"></div>
+            <div className="h-1 w-20 bg-exelion-accent mx-auto transition-all duration-300 hover:w-32"></div>
           </div>
 
           <div className="space-y-8">
-            <div>
+            <div className="transform transition-all duration-300 hover:translate-x-2">
               <h4 className="text-xl font-semibold text-exelion-accent mb-3">Mission Statement</h4>
               <p className="text-exelion-muted">
                 To become a global leader in technology, entertainment, and hardware innovation by creating unique, 
@@ -66,7 +67,7 @@ const ValuesSection = () => {
               </p>
             </div>
             
-            <div>
+            <div className="transform transition-all duration-300 hover:translate-x-2">
               <h4 className="text-xl font-semibold text-exelion-accent mb-3">Vision Statement</h4>
               <p className="text-exelion-muted">
                 To achieve a revenue of $5 million by the end of the first year and $1-2 billion by the end of the second year, 
