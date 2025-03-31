@@ -68,7 +68,7 @@ const Navbar = () => {
               <circle cx="700" cy="80" r="10" fill="none" stroke="#9F9EA1" strokeWidth="3" />
             </g>
             
-            {/* EXELION text */}
+            {/* EXELION text - ensuring the correct company name */}
             <g fill="#FFFFFF" className="transition-transform duration-300">
               <path d="M150,160 H250 V180 H170 V200 H240 V220 H170 V240 H250 V260 H150 Z" className="group-hover:scale-105" />
               <path d="M270,160 L320,220 L370,160 H400 L330,240 L330,260 H310 L310,240 L240,160 Z" className="group-hover:scale-105" />
