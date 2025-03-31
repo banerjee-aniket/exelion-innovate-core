@@ -57,11 +57,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				exelion: {
-					DEFAULT: '#0A192F',
-					foreground: '#e6f1ff',
-					accent: '#64ffda',
-					secondary: '#112240',
-					muted: '#8892b0'
+					DEFAULT: 'hsl(var(--exelion-background))',
+					foreground: 'hsl(var(--exelion-foreground))',
+					accent: 'hsl(var(--exelion-accent))',
+					secondary: 'hsl(var(--exelion-secondary))',
+					muted: 'hsl(var(--exelion-muted))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
