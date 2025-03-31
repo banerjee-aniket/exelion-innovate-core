@@ -51,14 +51,42 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#" className="text-2xl font-bold text-exelion-foreground group">
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110">E</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-[50ms]">X</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-100">E</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-150">L</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-200">I</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-[250ms]">O</span>
-          <span className="inline-block transition-transform duration-300 group-hover:scale-110 delay-300">N</span>
+        <a href="#" className="relative group">
+          {/* SVG Exelion Logo with animation effects */}
+          <svg 
+            width="150" 
+            height="50" 
+            viewBox="0 0 800 300" 
+            className="transition-transform duration-300 group-hover:scale-105"
+          >
+            {/* Top horizontal lines */}
+            <g className="animate-pulse-accent">
+              <line x1="100" y1="80" x2="500" y2="80" stroke="#9F9EA1" strokeWidth="12" />
+              <line x1="520" y1="80" x2="700" y2="80" stroke="#9F9EA1" strokeWidth="12" />
+              <circle cx="510" cy="80" r="15" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+              <circle cx="100" cy="80" r="10" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+              <circle cx="700" cy="80" r="10" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+            </g>
+            
+            {/* EXELION text */}
+            <g fill="#FFFFFF" className="transition-transform duration-300">
+              <path d="M150,160 H250 V180 H170 V200 H240 V220 H170 V240 H250 V260 H150 Z" className="group-hover:scale-105" />
+              <path d="M270,160 L320,220 L370,160 H400 L330,240 L330,260 H310 L310,240 L240,160 Z" className="group-hover:scale-105" />
+              <path d="M420,160 H520 V180 H440 V200 H510 V220 H440 V240 H520 V260 H420 Z" className="group-hover:scale-105" />
+              <path d="M540,160 H560 V240 H640 V260 H540 Z" className="group-hover:scale-105" />
+              <path d="M660,160 C690,160 710,180 710,210 C710,240 690,260 660,260 C630,260 610,240 610,210 C610,180 630,160 660,160 Z M660,180 C640,180 630,195 630,210 C630,225 640,240 660,240 C680,240 690,225 690,210 C690,195 680,180 660,180 Z" className="group-hover:scale-105" />
+              <path d="M730,160 H750 V240 H810 V260 H730 Z" className="group-hover:scale-105" />
+            </g>
+            
+            {/* Bottom horizontal lines */}
+            <g className="animate-pulse-accent">
+              <line x1="100" y1="280" x2="500" y2="280" stroke="#9F9EA1" strokeWidth="12" />
+              <line x1="520" y1="280" x2="700" y2="280" stroke="#9F9EA1" strokeWidth="12" />
+              <circle cx="510" cy="280" r="15" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+              <circle cx="700" cy="280" r="10" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+              <circle cx="100" cy="280" r="10" fill="none" stroke="#9F9EA1" strokeWidth="3" />
+            </g>
+          </svg>
         </a>
 
         {/* Desktop Navigation */}
